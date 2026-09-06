@@ -1,0 +1,68 @@
+<Window x:Class="Widgets.Weather.Views.WeatherSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Previsão do Tempo — Configurações"
+        Width="430" SizeToContent="Height"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        Topmost="True"
+        FontFamily="Segoe UI Variable Text, Segoe UI"
+        FontSize="13">
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Localização" FontWeight="SemiBold" Margin="0,0,0,6" />
+
+        <TextBlock x:Name="CurrentLocation"
+                   Foreground="#555"
+                   TextTrimming="CharacterEllipsis"
+                   Margin="0,0,0,10" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="SearchBox"
+                     Grid.Column="0"
+                     Padding="6,4"
+                     KeyDown="OnSearchKeyDown" />
+            <Button x:Name="SearchButton"
+                    Grid.Column="1"
+                    Content="Buscar"
+                    Margin="8,0,0,0"
+                    Padding="14,4"
+                    Click="OnSearchClick" />
+        </Grid>
+
+        <TextBlock x:Name="SearchStatus"
+                   Foreground="#777"
+                   FontSize="12"
+                   Margin="0,6,0,0"
+                   Visibility="Collapsed" />
+
+        <!-- O geocoding ranqueia por população, então os resultados vêm com
+             estado e país: buscar "Santa Maria" traz Oaxaca de Juárez antes. -->
+        <ListBox x:Name="Results"
+                 Height="120"
+                 Margin="0,8,0,0"
+                 DisplayMemberPath="Name" />
+
+        <Separator Margin="0,16,0,12" />
+
+        <TextBlock Text="Unidade" FontWeight="SemiBold" Margin="0,0,0,6" />
+        <StackPanel Orientation="Horizontal">
+            <RadioButton x:Name="CelsiusOption" Content="Celsius (°C)" GroupName="Unit" IsChecked="True" />
+            <RadioButton x:Name="FahrenheitOption" Content="Fahrenheit (°F)" GroupName="Unit" Margin="20,0,0,0" />
+        </StackPanel>
+
+        <TextBlock Text="Atualizar a cada" FontWeight="SemiBold" Margin="0,16,0,6" />
+        <ComboBox x:Name="IntervalBox" Width="160" HorizontalAlignment="Left" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Cancelar" Padding="18,5" Click="OnCancelClick" />
+            <Button Content="Salvar" Padding="18,5" Margin="10,0,0,0" IsDefault="True" Click="OnSaveClick" />
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,10 @@
+bin/
+obj/
+dist/
+
+# Instruções de projeto para agentes de IA — ferramenta local, fora do repo.
+CLAUDE.md
+
+.vs/
+*.user
+*.suo

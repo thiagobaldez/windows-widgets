@@ -1,0 +1,38 @@
+{
+    "ip": "2001:db8:85a3::8a2e:370:7334",
+    "success": true,
+    "type": "IPv6",
+    "continent": "South America",
+    "continent_code": "SA",
+    "country": "Brazil",
+    "country_code": "BR",
+    "region": "São Paulo",
+    "region_code": "SP",
+    "city": "São Paulo",
+    "latitude": -23.5505199,
+    "longitude": -46.6333094,
+    "is_eu": false,
+    "postal": "01310",
+    "calling_code": "55",
+    "capital": "Brasília",
+    "borders": "AR,BO,CO,GF,GY,PE,PY,SR,UY,VE",
+    "flag": {
+        "img": "https://cdn.ipwhois.io/flags/br.svg",
+        "emoji": "🇧🇷",
+        "emoji_unicode": "U+1F1E7 U+1F1F7"
+    },
+    "connection": {
+        "asn": 64496,
+        "org": "Example Telecom",
+        "isp": "Example Telecom",
+        "domain": "example.com"
+    },
+    "timezone": {
+        "id": "America/Sao_Paulo",
+        "abbr": "-03",
+        "is_dst": false,
+        "offset": -10800,
+        "utc": "-03:00"
+    },
+    "readme": "https://ipwhois.io/docs"
+}

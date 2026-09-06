@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{638EB5FE-19E3-4450-91C5-3B415EEAD82A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetHost", "src\WidgetHost\WidgetHost.csproj", "{FD01AB2B-F5EA-4EE8-A87B-FAB41CEB16A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widgets.Weather", "src\Widgets.Weather\Widgets.Weather.csproj", "{A722CD29-2491-4125-8B2E-EC9DC698044A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F348173F-9049-4F6F-83FA-2114F68D711C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widgets.Weather.Tests", "tests\Widgets.Weather.Tests\Widgets.Weather.Tests.csproj", "{4C80F164-3F3A-4A0B-A591-577F9481D07B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widgets.Abstractions", "src\Widgets.Abstractions\Widgets.Abstractions.csproj", "{52E95104-1348-4C2A-9421-C824D06FFDF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetHost.Tests", "tests\WidgetHost.Tests\WidgetHost.Tests.csproj", "{09DD23FA-06B5-40FD-9929-9EA6C05E131A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD01AB2B-F5EA-4EE8-A87B-FAB41CEB16A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD01AB2B-F5EA-4EE8-A87B-FAB41CEB16A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD01AB2B-F5EA-4EE8-A87B-FAB41CEB16A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD01AB2B-F5EA-4EE8-A87B-FAB41CEB16A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A722CD29-2491-4125-8B2E-EC9DC698044A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A722CD29-2491-4125-8B2E-EC9DC698044A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A722CD29-2491-4125-8B2E-EC9DC698044A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A722CD29-2491-4125-8B2E-EC9DC698044A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C80F164-3F3A-4A0B-A591-577F9481D07B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C80F164-3F3A-4A0B-A591-577F9481D07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C80F164-3F3A-4A0B-A591-577F9481D07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C80F164-3F3A-4A0B-A591-577F9481D07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E95104-1348-4C2A-9421-C824D06FFDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E95104-1348-4C2A-9421-C824D06FFDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E95104-1348-4C2A-9421-C824D06FFDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E95104-1348-4C2A-9421-C824D06FFDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09DD23FA-06B5-40FD-9929-9EA6C05E131A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DD23FA-06B5-40FD-9929-9EA6C05E131A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DD23FA-06B5-40FD-9929-9EA6C05E131A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DD23FA-06B5-40FD-9929-9EA6C05E131A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD01AB2B-F5EA-4EE8-A87B-FAB41CEB16A8} = {638EB5FE-19E3-4450-91C5-3B415EEAD82A}
+		{A722CD29-2491-4125-8B2E-EC9DC698044A} = {638EB5FE-19E3-4450-91C5-3B415EEAD82A}
+		{4C80F164-3F3A-4A0B-A591-577F9481D07B} = {F348173F-9049-4F6F-83FA-2114F68D711C}
+		{52E95104-1348-4C2A-9421-C824D06FFDF3} = {638EB5FE-19E3-4450-91C5-3B415EEAD82A}
+		{09DD23FA-06B5-40FD-9929-9EA6C05E131A} = {F348173F-9049-4F6F-83FA-2114F68D711C}
+	EndGlobalSection
+EndGlobal

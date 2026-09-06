@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>Widgets.Weather</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Widgets.Abstractions\Widgets.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Deixa os testes alcancarem helpers internos sem inchar a API publica. -->
+    <InternalsVisibleTo Include="Widgets.Weather.Tests" />
+  </ItemGroup>
+
+</Project>

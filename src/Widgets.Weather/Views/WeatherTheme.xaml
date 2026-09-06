@@ -1,0 +1,48 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Recursos compartilhados pelos três layouts. Manter num lugar só é o
+         que impede pequeno, médio e grande de virarem três designs diferentes. -->
+
+    <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+
+    <!-- Substrato escuro e frio: o widget pousa sobre um papel de parede
+         desconhecido e precisa se sustentar sozinho em qualquer um. -->
+    <SolidColorBrush x:Key="Ink" Color="#F2F5F7" />
+    <SolidColorBrush x:Key="InkDim" Color="#8A97A3" />
+    <SolidColorBrush x:Key="Hairline" Color="#1FFFFFFF" />
+    <SolidColorBrush x:Key="CardBorder" Color="#26FFFFFF" />
+    <SolidColorBrush x:Key="CardFill" Color="#F00E1216" />
+
+    <!-- O par quente/frio só marca temperatura. É informação, não tinta. -->
+    <SolidColorBrush x:Key="Mercury" Color="#E8623A" />
+    <SolidColorBrush x:Key="Frost" Color="#6FB6D9" />
+
+    <!-- Cor do sol nos ícones. Separada do mercúrio de propósito: se o sol
+         usasse a mesma cor da temperatura, a codificação perderia sentido. -->
+    <SolidColorBrush x:Key="Sun" Color="#F2B441" />
+
+    <!-- Numerais tabulares: 9° virando 10° não pode empurrar o layout a cada
+         atualização. -->
+    <FontFamily x:Key="Numerals">Cascadia Mono, Consolas</FontFamily>
+    <FontFamily x:Key="Ui">Segoe UI Variable Text, Segoe UI</FontFamily>
+
+    <Style x:Key="MicroLabel" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Ui}" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{StaticResource InkDim}" />
+    </Style>
+
+    <Style x:Key="Reading" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Numerals}" />
+        <Setter Property="Foreground" Value="{StaticResource Ink}" />
+    </Style>
+
+    <Style TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Ui}" />
+        <Setter Property="Foreground" Value="{StaticResource Ink}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
+
+</ResourceDictionary>

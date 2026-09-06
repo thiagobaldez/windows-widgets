@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- NotifyIcon da bandeja vem do WinForms; evita uma dependencia NuGet. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyName>WindowsWidgets</AssemblyName>
+    <RootNamespace>WidgetHost</RootNamespace>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+
+    <!-- Icone do executavel (Explorer, Alt+Tab, dialogo de propriedades). -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
+
+    <Product>Windows Widgets</Product>
+    <AssemblyTitle>Windows Widgets</AssemblyTitle>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- O mesmo .ico embarcado como recurso, para a bandeja poder carregar o
+         quadro no tamanho exato em vez de escalar um 32x32. -->
+    <Resource Include="app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Widgets.Weather\Widgets.Weather.csproj" />
+    <ProjectReference Include="..\Widgets.Abstractions\Widgets.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
